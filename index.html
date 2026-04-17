@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Clinic App</title>
+  <title>MediQueue</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Clinic Booking App</h1>
+<div class="app">
 
-<input id="name" placeholder="Enter your name">
-<input id="clinic" placeholder="Enter clinic name">
+  <!-- HEADER -->
+  <div class="header">
+    <h2>Find Nearby Clinics</h2>
+    <input placeholder="Search clinic...">
+  </div>
 
-<button onclick="book()">Book Appointment</button>
+  <!-- CLINIC CARD -->
+  <div class="card">
+    <div class="status">Open</div>
+    <div class="price">₹580</div>
 
-<p id="result"></p>
+    <h3>Dr. Aniket Bellare</h3>
+    <p>📍 Pune</p>
+
+    <button onclick="book()">Book Token</button>
+
+    <div class="stats">
+      <div>
+        <b>0</b>
+        <span>Current</span>
+      </div>
+      <div>
+        <b>24 min</b>
+        <span>Wait</span>
+      </div>
+      <div>
+        <b>0</b>
+        <span>Today</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <div class="nav">
+    <span>🏠 Home</span>
+    <span>🎫 My Tokens</span>
+    <span>👤 Profile</span>
+  </div>
+
+</div>
 
 <script>
-async function book() {
-  const name = document.getElementById("name").value;
-  const clinic = document.getElementById("clinic").value;
-
-  document.getElementById("result").innerText =
-    "Booking started for " + name + " at " + clinic;
+function book(){
+  alert("Token booked!");
 }
 </script>
 
